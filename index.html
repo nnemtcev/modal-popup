@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Modal Popup Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="modal-container" id="modal_container">
+      <div class="modal">
+        <h1>Modals are awesome</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+          sodales egestas lorem, sed bibendum velit porttitor ut. Praesent
+          condimentum tempor elementum. Sed ultrices tellus vel nulla venenatis
+          rutrum. Donec in sodales lacus. Nam ac venenatis ante. Aliquam ac
+          vehicula enim. Donec mollis ligula non diam sollicitudin, ac bibendum
+          quam malesuada.
+        </p>
+        <button id="close">Close Modal</button>
+      </div>
+    </div>
+    <div></div>
+    <button id="open">Open Modal</button>
+    <script>
+      const openButton = document.getElementById("open");
+      const closeButton = document.getElementById("close");
+      const modalContainer = document.getElementById("modal_container");
+
+      openButton.addEventListener("click", () => {
+        modalContainer.classList.remove("closed");
+      });
+
+      closeButton.addEventListener("click", () => {
+        modalContainer.classList.add("closed");
+      });
+    </script>
+  </body>
+</html>

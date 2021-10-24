@@ -39,6 +39,12 @@
       closeButton.addEventListener("click", () => {
         modalContainer.classList.add("closed");
       });
+
+      document.body.addEventListener("click", (e) => {
+        if (e.target.classList.contains("modal-container")) {
+          e.target.classList.add("closed");
+        }
+      });
     </script>
   </body>
 </html>
